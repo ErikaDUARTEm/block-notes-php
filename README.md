@@ -4,4 +4,4 @@ Es una app web para guardar notas, podrás crear, leer, editar y eliminar de la 
 
 #Imagenes de Block-notes
 
-![]()
+![imagen del home](https://raw.githubusercontent.com/ErikaDUARTEm/block-notes-php/main/assets/img/addNew.jpg)
