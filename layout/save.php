@@ -2,7 +2,7 @@
 require_once "../configExample/configExample.php";
 
 
-//validar que vengas datos, en caso de que falte uno, que rediriga a nuevo
+//validar que vengas datos, en caso de que falte uno, que rediriga a nuevo.php
 $titulo = isset($_POST['titulo']) ? $_POST['titulo'] : '';
 $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
 $prioridad = isset($_POST['prioridad']) ? $_POST['prioridad'] : '';
