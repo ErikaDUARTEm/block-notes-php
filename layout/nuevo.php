@@ -2,8 +2,8 @@
     require_once "header.php";
     require_once "menu.php";
 ?>
-    <div class="container text-bg-primary flex p-5 ">
-        <h3 class="text-uppercase">Nueva tarea</h3>
+    <div class="container text-bg-primary p-5 ">
+        <h3 class="text-uppercase">New task</h3>
         <form action="save.php" method="POST">
             <div class="form-group ">
                 <label for="" class="text-capitalize">Title</label>
@@ -21,7 +21,7 @@
                     <option value="3">Low</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-light flex justify-content-center align-content-center mt-5">Guardar</button>
+            <button type="submit" class="btn btn-light mt-5">Save</button>
         </form>
     </div>
 </body>

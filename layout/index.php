@@ -1,5 +1,6 @@
 <?php
-require_once "config/config.php";
+   require_once "../configExample/configExample.php";
+
 
 
 try {
@@ -13,23 +14,23 @@ try {
     $ex->getMessage();
 }
 
-require_once "layout/header.php";
-require_once "layout/menu.php";
+require_once "header.php";
+require_once "menu.php";
+require_once "mensaje.php";
 
 ?>
 
-//Html que muestra las tareas guardadas
 <main class="container mt-5">
     <div class="row">
         <div class="col-12">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Titulo</th>
-                        <th>Descripción</th>
-                        <th>Estado</th>
-                        <th>Fecha</th>
-                        <th>Prioridad</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Estatus</th>
+                     <t   h>Date</th>
+                        <th>Priority</th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -39,36 +40,36 @@ require_once "layout/menu.php";
                 <?php foreach ($datos as $row) {
                     switch ($row['prioridad']) {
                         case 1:
-                            $priodidad =  "alta";
+                            $priodidad =  "High";
                             break;
                         case 2:
-                            $priodidad =  "media";
+                            $priodidad =  "Medium";
                             break;
 
                         default:
-                            $priodidad =  "baja";
+                            $priodidad =  "Low";
                             break;
                     }
                 ?>
                     <tr>
                         <td><?= $row['titulo'] ?></td>
                         <td><?= $row['descripcion'] ?></td>
-                        <td><?= ($row['estado'] == 0) ? 'Pendiente' : 'Finalizado' ?></td>
+                        <td><?= ($row['estado'] == 0) ? "<span class='text-success'>Pending </span>" : "<span class='text-primary'>Finished</span>" ?></td>
                         <td><?= $row['fecha'] ?></td>
                         <td><?= $priodidad ?></td>
                         <td>
                             <form action="updateEstado.php" method="post">
                                 <input type="hidden" value="<?= $row['id'] ?>" name="id">
-                                <input type="submit" name="checkbox" value="Finalizar tarea" class="btn btn-primary">
+                                <input type="submit" name="checkbox" value="Complete" class="btn btn-primary">
                             </form>
                         </td>
                         <th>
-                            <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-info">Editar</a>
+                            <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-info">Edit</a>
                         </th>
                         <td>
                             <form action="delete.php" method="post">
                                 <input type="hidden" value="<?= $row['id'] ?>" name="id">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>
                     </tr>

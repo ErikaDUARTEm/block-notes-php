@@ -1,5 +1,7 @@
 <?php
-require_once "config/config.php";
+  require_once "../configExample/configExample.php";
+
+
 //validar que vengas datos, en caso de que falte uno, que rediriga a nuevo
 $titulo = isset($_POST['titulo']) ? $_POST['titulo'] : '';
 $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';

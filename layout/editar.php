@@ -1,5 +1,6 @@
 <?php
-    require_once "config/config.php";
+  require_once "../configExample/configExample.php";
+    
     $id = $_GET['id'];
     try{
         $conexion = new PDO("mysql:host=". HOST. ";dbname=". DB_NAME . "", DB_USER, DB_PASSWORD);
@@ -31,9 +32,9 @@
             <div class="form-group">
                 <label for="">Prioridad</label>
                 <select name="prioridad" class="form-control">
-                    <option value="1" <?= ($registro['prioridad'] == 1) ? "selected" : ""?>>Alta</option>
-                    <option value="2" <?= ($registro['prioridad'] == 2) ? "selected" : "" ?>>Media</option>
-                    <option value="3" <?= ($registro['prioridad'] == 3) ? "selected" : "" ?>>Baja</option>
+                    <option value="1" <?= ($registro['prioridad'] == 1) ? "selected" : ""?>>High</option>
+                    <option value="2" <?= ($registro['prioridad'] == 2) ? "selected" : "" ?>>Medium</option>
+                    <option value="3" <?= ($registro['prioridad'] == 3) ? "selected" : "" ?>>Low</option>
                 </select>
             </div>
             <div class="form-group mt-4">
