@@ -24,13 +24,13 @@ if (empty($titulo) || empty($descripcion) || empty($prioridad)) {
 
         if ($stringSql->execute()) {  //si execute es true redirigir a index.php
             //mandar un mensaje del resultado de la operación por get 
-            header("Location: index.php?mensaje=Tarea guardada correctamente");
+            header("Location: index.php?mensaje=Task saved successfully");
             exit();
         } else {
-            header("Location: index.php?mensaje=Error al guardar la tarea");
+            header("Location: index.php?mensaje=Failed to save task");
         }
     } catch (PDOException $ex) {
-        echo "No pudimos conectarnos a la base de datos, revise su conexión.";
+        echo "We couldn't connect to the database, please check your connection.";
         $ex->getMessage();
     }
 }
