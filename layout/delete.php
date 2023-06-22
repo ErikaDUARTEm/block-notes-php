@@ -1,5 +1,5 @@
 <?php
-    require_once "config/settings.php";
+    require_once "config/config.php";
     $id =$_POST['id'];
     try{
         $conexion = new PDO("mysql:host=". HOST. ";dbname=". DB_NAME . "", DB_USER, DB_PASSWORD);
