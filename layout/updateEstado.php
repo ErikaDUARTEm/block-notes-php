@@ -1,11 +1,11 @@
 <?php
-   require_once "../configExample/configExample.php";
+require_once "../configExample/configExample.php";
 
 if (isset($_POST['checkbox']) && !empty($_POST['checkbox'])) {
-    // Verificar si el checkbox está marcado
+    // Verificar si el boton de completar tarea está marcado
     $tareaId = $_POST['id'];
     $estado = 1;
-    // Actualizar el estado en la base de datos según tu lógica
+    // Actualizar el estado en la base de datos
     try {
         $conexion = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME . "", DB_USER, DB_PASSWORD);
 

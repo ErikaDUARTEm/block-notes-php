@@ -1,5 +1,5 @@
 <?php
-  require_once "../configExample/configExample.php";
+require_once "../configExample/configExample.php";
 
 
 //validar que vengas datos, en caso de que falte uno, que rediriga a nuevo

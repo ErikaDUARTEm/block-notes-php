@@ -1,7 +1,5 @@
 <?php
-   require_once "../configExample/configExample.php";
-
-
+require_once "../configExample/configExample.php";
 
 try {
     $conexion = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME . "", DB_USER, DB_PASSWORD);
@@ -19,7 +17,7 @@ require_once "menu.php";
 require_once "mensaje.php";
 
 ?>
-
+<!--Plantilla del home que muestra todas las tareas guardas-->
 <main class="container mt-5">
     <div class="row">
         <div class="col-12">
@@ -29,7 +27,7 @@ require_once "mensaje.php";
                         <th>Title</th>
                         <th>Description</th>
                         <th>Estatus</th>
-                     <t   h>Date</th>
+                        <th>Date</th>
                         <th>Priority</th>
                         <th></th>
                         <th></th>

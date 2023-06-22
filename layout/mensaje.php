@@ -1,5 +1,6 @@
 <?php
 //Mostrar mensaje de tarea guardada o eliminada correctamente
+//Se recibe el mensaje por el metodo get y se muestra un mensaje dependiendo del mensaje recibido
 if (isset($_GET['mensaje'])) {
     $mensaje = $_GET['mensaje'];
     if ($mensaje == "Task saved successfully") {

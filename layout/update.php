@@ -1,5 +1,6 @@
 <?php
-   require_once "../configExample/configExample.php";
+require_once "../configExample/configExample.php";
+
 
 $titulo = $_POST['titulo'];
 $descripcion = $_POST['descripcion'];
